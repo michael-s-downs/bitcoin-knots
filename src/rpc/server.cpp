@@ -340,6 +340,8 @@ CRPCTable::CRPCTable()
     for (const auto& c : vRPCCommands) {
         appendCommand(c.name, &c);
     }
+    RegisterConfigRPCCommands(*this);
+
 }
 
 void CRPCTable::appendCommand(const std::string& name, const CRPCCommand* pcmd)
